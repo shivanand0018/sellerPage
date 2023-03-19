@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Seller Products</h1>
+    <div class="nav">
+        <form id="form" method="POST" onsubmit="addProduct(event)">
+            <label>Category</label>
+            <select name="category" id="category" >
+                <option value="" hidden>Choose below</option>
+                <option value="Personal">Personal</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothes">Clothes</option>
+            </select>
+            <label>Description</label>
+            <input type="text" name="description" id="description">
+            <label>Amount</label>
+            <input type="number" name="amount" id="amount">
+            <button id="submitbtn" type="submit">Submit</button>
+        </form>
+        <a id="but"></a>
+        <table class="table">
+            <h4>Personal Items</h4>
+            <h5 id="productTable">
+
+            </h5>
+            <h4>Electronics Items</h4>
+            <h5 id="elecTable">
+
+            </h5>
+        </table>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script src="/js/main.js"></script>
+
+</html>
